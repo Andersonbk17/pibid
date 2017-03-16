@@ -16,8 +16,12 @@ class Principal extends CI_Controller{
     //put your code here
     
     public function index(){
-        
+        $opcaoLateral ['opcaoLateral']= "principal";
         $this->load->view('principal');
+        $this->load->view('includes/html_header');
+        $this->load->view('includes/html_footer');
+        $this->load->view('includes/menu',$opcaoLateral);
+        
     }
     
             
