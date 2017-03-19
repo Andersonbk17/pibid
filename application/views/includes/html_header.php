@@ -9,24 +9,24 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>SGPPEX</title>
+    <title>PIBID FÍSICA</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php base_url(); ?>assets/bootstrap/css/dashboard.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/bootstrap/css/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="<?php base_url(); ?>assets/bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <script src="<?php echo base_url(); ?>assets/bootstrap/js/ie-emulation-modes-warning.js"></script>
     
     
-    <script type="text/javascript" src="<?php base_url(); ?>assets/bootstrap/js/jquery.min.nova.js"></script>
-    <script type="text/javascript" src="<?php base_url() ?>assets/bootstrap/js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap/js/jquery.min.nova.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/bootstrap/js/jquery.maskedinput.min.js"></script>
     
     <!-- JQUERY COOKIE -->
-    <script type="text/javascript" src="<?php base_url() ?>assets/bootstrap/js/jquery.cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/bootstrap/js/jquery.cookie/jquery.cookie.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

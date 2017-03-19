@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="<?php base_url()?>Principal">PIBID FÍSICA</a>
+            <a class="navbar-brand" href="<?php echo base_url()?>Principal">PIBID FÍSICA</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -16,7 +16,7 @@
             <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Configurações</a></li>
             
             <li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Ajuda</a></li>
-            <li><a id="botaoSair" href="<?php base_url()?>login"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sair</a></li>
+            <li><a id="botaoSair" href="<?php echo base_url()?>login"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sair</a></li>
           </ul>
             <!--
           <form class="navbar-form navbar-right">
@@ -33,11 +33,11 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-              <li <?php if($opcaoLateral == "principal") {echo 'class="active"';}?>><a href="<?php base_url() ?>Principal">Tela Inicial <span class="sr-only">(current)</span></a></li>
+              <li <?php if($opcaoLateral == "principal") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Principal">Tela Inicial <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Relatórios</a></li>
-            <li <?php if($opcaoLateral == "bolsistas") {echo 'class="active"';}?>><a href="<?php base_url() ?>Bolsistas">Bolsistas</a></li>
-            <li <?php if($opcaoLateral == "pesquisa") {echo 'class="active"';}?>><a href="<?php base_url() ?>Pesquisas">Pesquisas</a></li>
-            <li <?php if($opcaoLateral == "usuarios") {echo 'class="active"';}?>><a href="<?php base_url() ?>Usuarios">Usuários</a></li>
+            <li <?php if($opcaoLateral == "bolsista") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Bolsista_listagem">Bolsistas</a></li>
+            <li <?php if($opcaoLateral == "pesquisa") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Pesquisas">Pesquisas</a></li>
+            <li <?php if($opcaoLateral == "usuarios") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Usuarios">Usuários</a></li>
             </ul>
             
             
