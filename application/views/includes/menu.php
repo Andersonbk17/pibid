@@ -36,6 +36,7 @@
               <li <?php if($opcaoLateral == "principal") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Principal">Tela Inicial <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Relatórios</a></li>
             <li <?php if($opcaoLateral == "bolsista") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Bolsista_listagem">Bolsistas</a></li>
+            <li <?php if($opcaoLateral == "capacitacao") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Capacitacao_listagem">Capacitação</a></li>
             <li <?php if($opcaoLateral == "experimento") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Experimento_listagem">Experimentos</a></li>
             <li <?php if($opcaoLateral == "recursos_didaticos") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Recursos_didaticos_listagem">Recursos didáticos</a></li>
             </ul>
