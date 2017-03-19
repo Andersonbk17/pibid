@@ -37,7 +37,7 @@
             <li><a href="#">Relatórios</a></li>
             <li <?php if($opcaoLateral == "bolsista") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Bolsista_listagem">Bolsistas</a></li>
             <li <?php if($opcaoLateral == "experimento") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Experimento_listagem">Experimentos</a></li>
-            <li <?php if($opcaoLateral == "usuarios") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Usuarios">Usuários</a></li>
+            <li <?php if($opcaoLateral == "recursos_didaticos") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Recursos_didaticos_listagem">Recursos didáticos</a></li>
             </ul>
             
             
