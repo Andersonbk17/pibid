@@ -1,10 +1,10 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-    <div class="col-md-10">
-        <h1 class="page-header">BOLSISTAS</h1>
+    <div class="col-md-9">
+        <h1 class="page-header">EXPERIMENTOS</h1>
     </div>
-    <div class="col-md-2">
-        <a class="btn btn-primary btn-block"  href="<?php echo base_url() ?>Cadastro_bolsista">NOVO BOLSISTA</a>
+    <div class="col-md-3">
+        <a class="btn btn-primary btn-block"  href="<?php echo base_url() ?>Cadastro_experimento">NOVO EXPERIMENTO</a>
 
     </div>
 

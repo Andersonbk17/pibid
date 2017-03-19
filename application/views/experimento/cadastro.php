@@ -20,7 +20,7 @@
     ?>
     
     <div class="col-md-12">
-        <h1 class="page-header">NOVO BOLSISTA</h1>
+        <h1 class="page-header">NOVO EXPERIMENTO</h1>
     </div>
     <!-- MENSAGEM DE CONFIRMAÇÂO
     <div class="col-md-12">
@@ -103,36 +103,30 @@
 
 
     <div class="col-md-12" >
-        <form  id="form" action="<?php echo base_url(); ?>Cadastro_bolsista/cadastrar" method="post">
+        <form  id="form" action="<?php echo base_url(); ?>Cadastro_experimento/cadastrar" method="post">
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Dados Pessoais</h3>
+                <h3 class="panel-title">Dados do Experimento</h3>
               </div>
               <div class="panel-body">
                 
                   <div class="form-group">
                     <label for="nome">Nome *</label>
-                    <input type="text" class="form-control" id="nome" name="nome"placeholder="Nome Completo">
+                    <input type="text" class="form-control" id="nome"  name="nome"placeholder="Nome Completo">
                   </div>
                   
                   
                   <div class="form-group">
-                    <label for="telefone">Telefone *</label>
-                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(xx)xxxxxxxxx">
+                    <label for="descricao">Descrição *</label>
+                    
+                    <textarea class="form-control" id="descricao" name="descricao" placeholder="BREVE DESCRIÇÃO" rows="6"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="email@email.com">
+                    <label for="anexo">Anexo *</label>
+                    <input type="file" class="form-control" id="anexo" name="anexo" >
                   </div>
-                  <div class="form-group">
-                    <label for="senha">Senha *</label>
-                    <input type="password" class="form-control" id="senha" name="senha" placeholder="senha">
-                  </div>
-                  <div class="form-group">
-                    <label for="repetirsenha">Repetir Senha *</label>
-                    <input type="password" class="form-control" id="repetirSenha" name="repetirSenha" placeholder="senha">
-                  </div>
+                  
                   
                   
               </div>
