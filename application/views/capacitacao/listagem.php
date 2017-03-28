@@ -13,12 +13,24 @@
             <tr>
                 <th>ID</th>
                 <th>NOME</th>
-                <th>DATA</th>
+                <th>INICIO</th>
+                <th>TÉRMINO</th>
                 <th>ESCOLA ATENDIDA</th>
                 
 
 
             </tr>
+            
+             <?php
+                foreach ($lista as $l){
+                    echo "<tr>";
+                    echo "<td>".$l['tema']."</td>";
+                    echo "<td>".$l['inicio']."</td>";
+                    echo "<td>".$l['termino']."</td>";
+                    echo "<td>".$l['escola']."</td>";
+                }
+            
+            ?>
             
 
         </table>

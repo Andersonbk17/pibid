@@ -113,8 +113,8 @@
               <div class="panel-body">
                 
                   <div class="form-group col-md-12">
-                    <label for="nome">Título *</label>
-                    <input type="text" class="form-control" id="nome"  name="nome"placeholder="Título ou tema da capacitação">
+                    <label for="tema">TEMA *</label>
+                    <input type="text" class="form-control" id="tema"  name="tema" placeholder="Título ou tema da capacitação">
                   </div>
                   
                   <div class="form-group col-md-4">
@@ -132,8 +132,8 @@
                   </div>
                   
                   <div class="form-group col-md-12">
-                    <label for="publico">Público Alvo *</label>
-                    <input type="text" class="form-control" id="publico"  name="publico"placeholder="Público Alvo ">
+                    <label for="publico_alvo">Público Alvo *</label>
+                    <input type="text" class="form-control" id="publico_alvo"  name="publico_alvo"placeholder="Público Alvo ">
                   </div>
                   
                   

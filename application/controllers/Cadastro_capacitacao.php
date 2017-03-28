@@ -27,11 +27,16 @@ class Cadastro_capacitacao extends CI_Controller{
         
     }
     
+    public function teste() {
+        $this->load->model('CapacitacaoModel','capacitacao');
+        var_dump($this->capacitacao->listarTodos());
+    }
+    
     public function cadastrar(){
         $this->load->library('form_validation');
         
-        $this->form_validation->set_rules('descricao', '[DESCRIÇÃO]', 'required');
-        $this->form_validation->set_rules('nome', '[NOME]', 'required|min_length[4]');
+        $this->form_validation->set_rules('sintese', '[SINTESE]', 'required');
+        $this->form_validation->set_rules('tema', '[TEMA]', 'required|min_length[4]');
         
         
          if ($this->form_validation->run() == FALSE) {
@@ -45,13 +50,36 @@ class Cadastro_capacitacao extends CI_Controller{
             $this->load->view('includes/menu',$opcaoLateral);
         
            
-           
-        
-           
-           
-           
          } else {
-              echo "Formulário enviado com sucesso.";
+           
+             
+            $this->load->model('CapacitacaoModel','capacitacao');
+            $this->load->helper('form');
+            
+            
+            //RECEBENDO DADOS DO POST
+            $dados['tema'] = $this->input->post('tema');
+            $dados['inicio'] = $this->input->post('inicio');
+            $dados['termino'] = $this->input->post('termino');
+            $dados['escola'] = $this->input->post('escola');
+            $dados['publico_alvo'] = $this->input->post('publico_alvo');
+            $dados['sintese'] = $this->input->post('sintese');
+            $dados['anexo'] = $this->input->post('anexo');
+            $dados['idbolsista'] = $this->session->userdata('idlo');
+            
+            
+            //SALVANDO
+            $this->capacitacao->salvar($dados);
+             
+             
+             //se tudo oks
+            $opcaoLateral ['opcaoLateral']= "capacitacao";
+            $salvo = true;
+            $this->load->view('/capacitacao/cadastro',$salvo);
+            $this->load->view('includes/html_header');
+            $this->load->view('includes/html_footer');
+            $this->load->view('includes/menu',$opcaoLateral);
+            $this->load->library('form_validation');
         }
     }
 }
