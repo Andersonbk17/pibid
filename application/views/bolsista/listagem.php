@@ -13,12 +13,22 @@
             <tr>
                 <th>ID</th>
                 <th>NOME</th>
-                <th>ORIENTADOR</th>
-                <th>BOLSISTA</th>
+                <th>Telefone</th>
+                <th>EMAIL</th>
                 
 
 
             </tr>
+            <?php
+                foreach ($bolsistas as $b){
+                    echo "<tr>";
+                    echo "<td>".$b['idbolsistas']."</td>";
+                    echo "<td>".$b['nome']."</td>";
+                    echo "<td>".$b['telefone']."</td>";
+                    echo "<td>".$b['email']."</td>";
+                }
+            
+            ?>
             
 
         </table>

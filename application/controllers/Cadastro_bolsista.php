@@ -29,9 +29,10 @@ class Cadastro_bolsista extends CI_Controller{
     public function cadastrar(){
         $this->load->library('form_validation');
         $this->form_validation->set_rules('email', '[Email]', 'required|valid_email');
-        $this->form_validation->set_rules('telefone', '[TELEFONE]', 'required|valid_email');
-        $this->form_validation->set_rules('nome', '[NOME]', 'required|valid_email');
-        $this->form_validation->set_rules('senha', '[SENHA]', 'required|min_length[4]|matches[repetirSenha]');
+        $this->form_validation->set_rules('telefone', '[TELEFONE]', 'required');
+        $this->form_validation->set_rules('nome', '[NOME]', 'required');
+        $this->form_validation->set_rules('senha', '[SENHA]', 'required|min_length[4]');
+        $this->form_validation->set_rules('repetir', '[REPETIR SENHA]', 'required|min_length[4]|matches[senha]');
         
          if ($this->form_validation->run() == FALSE) {
            $erros = array('mensagens' => validation_errors());
@@ -42,15 +43,38 @@ class Cadastro_bolsista extends CI_Controller{
             $this->load->view('includes/html_header');
             $this->load->view('includes/html_footer');
             $this->load->view('includes/menu',$opcaoLateral);
-        
-           
-           
-        
-           
-           
-           
+          
          } else {
-              echo "Formulário enviado com sucesso.";
+            $this->load->model('BolsistaModel','bolsista');
+            $this->load->helper('form');
+            
+            
+            //RECEBENDO DADOS DO POST
+            $dados['nome'] = $this->input->post('nome');
+            $dados['telefone'] = $this->input->post('telefone');
+            $dados['email'] = $this->input->post('email');
+            $dados['senha'] = $this->input->post('senha');
+            $dados['status'] = $this->input->post('status');
+            
+            
+            //SALVANDO
+            $this->bolsista->salvar($dados);
+             
+             
+             //se tudo oks
+            
+            
+            
+        $opcaoLateral ['opcaoLateral']= "bolsista";
+        $salvo = true;
+        $this->load->view('/bolsista/cadastro',$salvo);
+        $this->load->view('includes/html_header');
+        $this->load->view('includes/html_footer');
+        $this->load->view('includes/menu',$opcaoLateral);
+        $this->load->library('form_validation');
+             
+             
+                
         }
     }
 }

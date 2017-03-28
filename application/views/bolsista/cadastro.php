@@ -1,3 +1,12 @@
+
+<!-- EFEITO NA MENSAGEM DE CONFIRMAÇÂO-->
+    < <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/izitoast/dist/css/iziToast.min.css"> 
+    <script src="<?php echo base_url(); ?>/assets/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
+    <!-- ESSE CODIGO TA AKI POR CAUSA DE BUG -->
+    
+    
+    
+
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
     <?php
@@ -15,6 +24,29 @@
          if(isset($mensagens)) echo $mensagens; 
 	echo "</div>";
     }
+    
+    
+    /*
+
+     * EXIBIR MENSAGEM DE CONFIRMAÇÃO
+     * 
+     *  */
+    
+    
+    if(isset($salvo)){
+        echo "<script type='text/javascript'>
+        iziToast.show({
+            title: 'Confirmação',
+            message: 'Bolsista Cadastrado com Sucesso!',
+            color: 'green',
+            timeout: 6000,
+            position: 'topRight'
+        });
+        </script>";
+    }
+    
+    
+    
     
     
     ?>
@@ -54,36 +86,10 @@
 <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
 
-    <script type="text/javascript">
-        //Códigos de mascaras com bibliotecas externas
-        jQuery(function ($) {
-            $("#nascimentoBolsista").mask("99/99/9999");
+   
 
-
-        });
-    </script>
-
-
-
-    <script type="text/javascript" >
-        //$("#navegacao").toggleClass("active");
-        $('#home').attr('class', 'active');
-
-
-
-        //if($('#localTrabalhoBolsista').val().get() == );
-    </script>
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $("#cpfBolsista").mask("999.999.999-99");
-            $("#dataExpedicaoBolsista").mask("99/99/9999");
-            $("#cpfBolsista").mask("999.999.999-99");
-            $("#cpfMae").mask("999.999.999-99");
-            $("#cpfResponsavel").mask("999.999.999-99");
-        });
-    </script>
+    
+    
 
     <script type="text/javascript">
 
@@ -130,9 +136,10 @@
                     <input type="password" class="form-control" id="senha" name="senha" placeholder="senha">
                   </div>
                   <div class="form-group">
-                    <label for="repetirsenha">Repetir Senha *</label>
-                    <input type="password" class="form-control" id="repetirSenha" name="repetirSenha" placeholder="senha">
+                    <label for="repetir">Repetir Senha *</label>
+                    <input type="password" class="form-control" id="repetir" name="repetir" placeholder="senha">
                   </div>
+                  <input type="hidden" name="status" id="status" value="1" />
                   
                   
               </div>
