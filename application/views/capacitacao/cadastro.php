@@ -104,7 +104,7 @@
 
 
     <div class="col-md-12" >
-        <form  id="form" action="<?php echo base_url(); ?>Cadastro_capacitacao/cadastrar" method="post">
+        <form  id="form" action="<?php echo base_url(); ?>Cadastro_capacitacao/cadastrar" method="post" enctype="multipart/form-data">
 
             <div class="panel panel-default">
               <div class="panel-heading">

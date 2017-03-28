@@ -68,6 +68,22 @@ class Cadastro_capacitacao extends CI_Controller{
             $dados['idbolsista'] = $this->session->userdata('idlo');
             
             
+            $nomeAluno = $this->session->userdata('usuario');
+            //recebendo arquivo
+            $anexo = $_FILES['anexo'];
+            $configuracao = array(
+                'upload_path'   => './capacitacao_files/',
+                'allowed_types' => 'pdf',
+                'file_name'     => $dados['tema'].' - '.$nomeAluno.'pdf',
+                'max_size'      => '5000'
+            );      
+            $this->load->library('upload');
+            $this->upload->initialize($configuracao);
+            $this->upload->do_upload('anexo');
+        
+        
+            
+            
             //SALVANDO
             $this->capacitacao->salvar($dados);
              
