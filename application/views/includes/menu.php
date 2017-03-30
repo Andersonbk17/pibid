@@ -40,6 +40,7 @@
             <li <?php if($opcaoLateral == "experimento") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Experimento_listagem">Experimentos</a></li>
             <li <?php if($opcaoLateral == "evento") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Evento_realizado_listagem">Eventos Realizados</a></li>
             <li <?php if($opcaoLateral == "recursos_didaticos") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Recursos_didaticos_listagem">Recursos didáticos</a></li>
+            <li <?php if($opcaoLateral == "gincana") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Gincana_listagem">Gincanas</a></li>
             </ul>
             
             
