@@ -15,9 +15,14 @@ class Evento_realizado_listagem extends CI_Controller{
     //put your code here
     
     public function index() {
+
+        $this->load->model('EventoRealizadoModel','evento');
+        
+        
+        $lista = array("lista"=> $this->evento->listarTodos($this->session->userdata('idlo')));
         
         $opcaoLateral ['opcaoLateral']= "evento";
-        $this->load->view('/eventos_realizados/listagem');
+        $this->load->view('/eventos_realizados/listagem',$lista);
         $this->load->view('includes/html_header');
         $this->load->view('includes/html_footer');
         $this->load->view('includes/menu',$opcaoLateral);

@@ -13,12 +13,25 @@
             <tr>
                 <th>ID</th>
                 <th>NOME</th>
-                <th>DATA</th>
+                <th>INICIO</th>
+                <th>TERMINO</th>
                 <th>ESCOLA ATENDIDA</th>
                 
 
 
             </tr>
+             <?php
+                foreach ($lista as $l){
+                    echo "<tr>";
+                    echo "<td>".$l['idbolsista_eventos_realizados']."</td>";
+                    echo "<td>".$l['titulo']."</td>";
+                    echo "<td>".$l['inicio']."</td>";
+                    echo "<td>".$l['termino']."</td>";
+                    echo "<td>".$l['local']."</td>";
+                    
+                }
+            
+            ?>
             
 
         </table>
