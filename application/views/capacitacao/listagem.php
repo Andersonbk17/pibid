@@ -24,6 +24,7 @@
              <?php
                 foreach ($lista as $l){
                     echo "<tr>";
+                    echo "<td>".$l['idbolsista_capacitacao']."</td>";
                     echo "<td>".$l['tema']."</td>";
                     echo "<td>".$l['inicio']."</td>";
                     echo "<td>".$l['termino']."</td>";

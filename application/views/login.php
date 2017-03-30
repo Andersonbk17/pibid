@@ -19,7 +19,7 @@
             <link href=<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css rel="stylesheet">
             
             
-            <!-- EFEITO NA MENSAGEM DE CONFIRMAÇÂO-->
+         <!-- EFEITO NA MENSAGEM DE CONFIRMAÇÂO-->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/izitoast/dist/css/iziToast.min.css"> 
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/izitoast/dist/css/icomoon.css"> 
         <script src="<?php echo base_url(); ?>assets/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>

@@ -72,7 +72,7 @@ class Cadastro_capacitacao extends CI_Controller{
             //recebendo arquivo
             $anexo = $_FILES['anexo'];
             $configuracao = array(
-                'upload_path'   => './capacitacao_files/',
+                'upload_path'   => './uploads/capacitacao/',
                 'allowed_types' => 'pdf',
                 'file_name'     => $dados['tema'].' - '.$nomeAluno.'pdf',
                 'max_size'      => '5000'
@@ -80,18 +80,19 @@ class Cadastro_capacitacao extends CI_Controller{
             $this->load->library('upload');
             $this->upload->initialize($configuracao);
             $this->upload->do_upload('anexo');
-        
+            $dados['anexo'] = base_url() .'uploads/capacitacao/'.$dados['tema'].'-'.$nomeAluno.'pdf';
         
             
             
             //SALVANDO
             $this->capacitacao->salvar($dados);
              
-             
+             $mensagem = true;
+             $this->session->set_flashdata('mensagem','Seu produto foi cadastrado com sucesso.');
              //se tudo oks
             $opcaoLateral ['opcaoLateral']= "capacitacao";
-            $salvo = true;
-            $this->load->view('/capacitacao/cadastro',$salvo);
+            
+            $this->load->view('/capacitacao/cadastro',$mensagem);
             $this->load->view('includes/html_header');
             $this->load->view('includes/html_footer');
             $this->load->view('includes/menu',$opcaoLateral);

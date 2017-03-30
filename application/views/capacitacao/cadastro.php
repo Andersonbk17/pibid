@@ -1,5 +1,9 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
+    
+    
+    
+ 
     <?php
     /*
                     CODIGO DE VALIDAÇÕES
@@ -16,93 +20,40 @@
 	echo "</div>";
     }
     
+      
     
     ?>
     
     <div class="col-md-12">
         <h1 class="page-header">NOVA CAPACITAÇÃO REALIZADA</h1>
     </div>
-    <!-- MENSAGEM DE CONFIRMAÇÂO
-    <div class="col-md-12">
-    <!-- Large modal 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
-            Mensagem
-    </button>
 
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                            Cadastro Realizado com Sucesso.
-                    </div>
-            </div>
+    
+    <!-- EFEITO NA MENSAGEM DE CONFIRMAÇÂO-->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/izitoast/dist/css/iziToast.min.css"> 
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/izitoast/dist/css/icomoon.css"> 
+        <script src="<?php echo base_url(); ?>assets/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
+    
+    
+    
+    
+    <?php 
 
-            <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">
-                            Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                            Save changes
-                    </button>
-            </div>
-    </div>
-
-</div>
-    -->
-
-
-
-<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-
-    <script type="text/javascript">
-        //Códigos de mascaras com bibliotecas externas
-        jQuery(function ($) {
-            $("#nascimentoBolsista").mask("99/99/9999");
-
-
-        });
-    </script>
-
-
-
-    <script type="text/javascript" >
-        //$("#navegacao").toggleClass("active");
-        $('#home').attr('class', 'active');
-
-
-
-        //if($('#localTrabalhoBolsista').val().get() == );
-    </script>
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $("#cpfBolsista").mask("999.999.999-99");
-            $("#inicio").mask("99/99/9999");
-            $("#termino").mask("99/99/9999");
-            $("#cpfBolsista").mask("999.999.999-99");
-            $("#cpfMae").mask("999.999.999-99");
-            $("#cpfResponsavel").mask("999.999.999-99");
-        });
-    </script>
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-
-
-            $("form").submit(function (event) {
-               // $("#myModal").modal("show");//mostra o modal
-               //confirm("Você Tem certeza que deseja salvar?");
-            });
-
-
-        });
-    </script>
-
-
-
-
+  
+    if(isset($_SESSION['mensagem'])){        //se tiver erros na validação mostrar essa parada aki
+        
+            echo "<script type='text/javascript'>"
+            . ""
+                    . ""
+                    . ""
+                    . "iziToast.success({
+                    title: 'OK',
+                    message: 'Cadastrado com Sucesso!'
+                
+                });</script>";
+    }
+?>
+    
     <div class="col-md-12" >
         <form  id="form" action="<?php echo base_url(); ?>Cadastro_capacitacao/cadastrar" method="post" enctype="multipart/form-data">
 

@@ -23,8 +23,8 @@
     
     
     <!-- EFEITO NA MENSAGEM DE CONFIRMAÇÂO-->
-    < <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/izitoast/dist/css/iziToast.min.css"> 
-    <script src="<?php echo base_url(); ?>/assets/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/izitoast/dist/css/iziToast.min.css"> 
+    <script src="<?php echo base_url(); ?>assets/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
     
     
     
