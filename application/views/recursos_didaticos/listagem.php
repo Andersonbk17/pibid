@@ -14,11 +14,22 @@
                 <th>ID</th>
                 <th>NOME</th>
                 <th>ORIENTADOR</th>
-                <th>BOLSISTA</th>
+                
                 
 
 
             </tr>
+            
+            <?php
+                foreach ($lista as $l){
+                    echo "<tr>";
+                    echo "<td>".$l['idbolsistas_recursos_didaticos']."</td>";
+                    echo "<td>".$l['titulo']."</td>";
+                    echo "<td>".$l['descricao']."</td>";
+                    
+                }
+            
+            ?>
             
 
         </table>

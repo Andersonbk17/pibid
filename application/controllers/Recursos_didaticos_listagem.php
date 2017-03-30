@@ -16,8 +16,14 @@ class Recursos_didaticos_listagem extends CI_Controller{
     
     public function index() {
         
+        $this->load->model('RecursosDidaticosModel','didaticos');
+        
+        
+        $lista = array("lista"=> $this->didaticos->listarTodos($this->session->userdata('idlo')));
+        
+        
         $opcaoLateral ['opcaoLateral']= "recursos_didaticos";
-        $this->load->view('/recursos_didaticos/listagem');
+        $this->load->view('/recursos_didaticos/listagem',$lista);
         $this->load->view('includes/html_header');
         $this->load->view('includes/html_footer');
         $this->load->view('includes/menu',$opcaoLateral);
