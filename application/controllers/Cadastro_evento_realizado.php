@@ -12,10 +12,7 @@
  * @author Andersonbk17
  */
 class Cadastro_evento_realizado extends CI_Controller{
-    //put your code here
-    
-    
-    
+ 
     public function index() {
         
         $opcaoLateral ['opcaoLateral']= "evento";
