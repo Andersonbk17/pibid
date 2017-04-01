@@ -45,6 +45,7 @@
             <li <?php if($opcaoLateral == "monitoria") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Monitoria_listagem">Monitoria</a></li>
             <li <?php if($opcaoLateral == "feira") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Feira_listagem">Feiras</a></li>
             <li <?php if($opcaoLateral == "participacao_eventos") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Participacao_eventos_listagem">Participação Eventos</a></li>
+            <li <?php if($opcaoLateral == "producao_artistico") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Producao_artistico_cultural_listagem">Produção Artistico Cultural</a></li>
             </ul>
             
             
