@@ -42,6 +42,7 @@
             <li <?php if($opcaoLateral == "recursos_didaticos") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Recursos_didaticos_listagem">Recursos didáticos</a></li>
             <li <?php if($opcaoLateral == "gincana") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Gincana_listagem">Gincanas</a></li>
             <li <?php if($opcaoLateral == "manual") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Manual_atividade_listagem">Manual de Atividades</a></li>
+            <li <?php if($opcaoLateral == "monitoria") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Monitoria_listagem">Monitoria</a></li>
             </ul>
             
             
