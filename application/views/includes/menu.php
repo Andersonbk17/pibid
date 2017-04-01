@@ -47,6 +47,7 @@
             <li <?php if($opcaoLateral == "participacao_eventos") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Participacao_eventos_listagem">Participação Eventos</a></li>
             <li <?php if($opcaoLateral == "producao_artistico") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Producao_artistico_cultural_listagem">Produção Artistico Cultural</a></li>
              <li <?php if($opcaoLateral == "producao_bibliografica") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>Producao_bibliografica_listagem">Produção Bibliográfia</a></li>
+             <li <?php if($opcaoLateral == "tcc") {echo 'class="active"';}?>><a href="<?php echo base_url() ?>tcc_listagem">TCC</a></li>
             </ul>
             
             
